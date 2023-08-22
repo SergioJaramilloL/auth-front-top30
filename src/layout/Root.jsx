@@ -5,7 +5,7 @@ import ValidateElement from "../components/ValidateElement"
 
 const Root = () => {
   const navigation = useNavigation()
-  const validPathsHeader = ['/', '/posts']
+  const validPathsHeader = ['/', '/posts', '/login', '/profile']
 
   return (
     <>
@@ -20,7 +20,6 @@ const Root = () => {
             : <Outlet />
         }
       </main>
-      <footer>Esto es un footer</footer>
     </>
   )
 }
