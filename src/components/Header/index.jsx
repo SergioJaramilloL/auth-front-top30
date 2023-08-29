@@ -26,9 +26,14 @@ const Header = () => {
             <NavLink to="/profile">Profile</NavLink>
           </li>
           { !localStorage.getItem('token') ? (
+            <>
             <li>
               <NavLink to="/login">Login</NavLink>
             </li>
+            <li>
+              <NavLink to="/register">Register</NavLink>
+            </li>
+            </>
           ) : (
             <button onClick={handleLogout}>Logout</button>
           )

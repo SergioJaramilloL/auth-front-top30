@@ -6,6 +6,9 @@ import NotFound from '../pages/NotFound'
 import Profile from '../pages/Profile'
 import PrivateRoute from '../components/PrivateRoute'
 import LoginPage from '../pages/Login'
+import Verify from '../pages/Verify'
+import RegisterPage from '../pages/Register'
+
 
 
 const router = createBrowserRouter([
@@ -23,8 +26,16 @@ const router = createBrowserRouter([
         element: <PrivateRoute> <Profile /> </PrivateRoute>
       },
       {
+        path: '/register',
+        element: <RegisterPage/>
+      },
+      {
         path: '/login',
         element: <LoginPage />
+      },
+      {
+        path: '/verify-account/:token',
+        element: <Verify />
       }
     ]
   },
